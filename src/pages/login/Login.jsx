@@ -18,7 +18,7 @@ import './Login.less'
               // localStorage.setItem('user_all',JSON.stringify(user));
               storageUtils.saveUser(user)
               memoryUtils.user = user
-              this.props.history.replace('/admin')
+              this.props.history.replace('/')
               message.success('登录成功')
           }else{
             message.error(result.msg)
@@ -50,7 +50,7 @@ import './Login.less'
       const user = memoryUtils.user
         if(user._id){
             // this.props.history.replace('/login')
-            return <Redirect to = '/admin'/>
+            return <Redirect to = '/'/>
         }
 
       const { getFieldDecorator } = this.props.form;
